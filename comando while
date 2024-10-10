@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int numero, soma_impares = 0, soma_pares = 0, count_pares = 0;
+
+    // Loop para ler os números até que o valor 0 seja inserido
+    while (1) {
+        printf("Digite um número (0 para parar): ");
+        scanf("%d", &numero);
+
+        if (numero == 0)
+            break;
+
+        if (numero % 2 == 0) {
+            soma_pares += numero;
+            count_pares++;
+        } else {
+            soma_impares += numero;
+        }
+    }
+
+    // Calcular a média dos pares se houver números pares
+    if (count_pares > 0) {
+        double media_pares = (double)soma_pares / count_pares;
+        printf("Soma dos ímpares: %d\n", soma_impares);
+        printf("Média dos pares: %.2f\n", media_pares);
+    } else {
+        printf("Soma dos ímpares: %d\n", soma_impares);
+        printf("Nenhum número par foi inserido.\n");
+    }
+
+    return 0;
+}
