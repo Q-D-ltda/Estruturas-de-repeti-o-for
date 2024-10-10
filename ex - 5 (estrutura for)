@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Leitura dos valores de a e b, garantindo que a < b;
+    do {
+        printf("Digite dois números inteiros (a < b): ");
+        scanf("%d %d", &a, &b);
+    } while (a >= b);
+
+    // Loop para imprimir a tabuada de cada número de a até b;
+    for (int i = a; i <= b; i++) {
+        printf("\nTabuada do %d:\n", i);
+        for (int j = 1; j <= 10; j++) {
+            printf("%d x %d = %d\n", i, j, i * j);
+        }
+    }
+
+    return 0;
+}
