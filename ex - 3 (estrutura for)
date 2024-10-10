@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    double A, R;
+
+    // Leitura do valor inicial e da razão
+    printf("Digite o valor inicial (A): ");
+    scanf("%lf", &A);
+
+    printf("Digite a razão (R): ");
+    scanf("%lf", &R);
+
+    // Geração e impressão da sequência de PG
+    printf("Sequência em progressão geométrica: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%.2lf ", A); // Imprime o valor atual com duas casas decimais
+        A *= R; // Calcula o próximo termo da PG
+    }
+    printf("\n");
+
+    return 0;
+}
