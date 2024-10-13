@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main() {
+    int i;
+    int j = 1;
     int a, b;
 
     // Leitura dos valores de a e b, garantindo que a < b;
@@ -10,9 +12,9 @@ int main() {
     } while (a >= b);
 
     // Loop para imprimir a tabuada de cada número de a até b;
-    for (int i = a; i <= b; i++) {
+    for (i = a; i <= b; i++) {
         printf("\nTabuada do %d:\n", i);
-        for (int j = 1; j <= 10; j++) {
+        for (j = 1; j <= 10; j++) {
             printf("%d x %d = %d\n", i, j, i * j);
         }
     }
